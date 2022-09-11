@@ -20,3 +20,10 @@ This application, written in Python, allows users to create and manage a list of
 [![unknown-3-min.png](https://i.postimg.cc/258K4Wpg/unknown-3-min.png)](https://postimg.cc/5XTgJ62m)
 [![unknown-2-min.png](https://i.postimg.cc/0yC4Mf4p/unknown-2-min.png)](https://postimg.cc/ZWCHXr4R)
 [![unknown-1-min.png](https://i.postimg.cc/RZm8Z8gS/unknown-1-min.png)](https://postimg.cc/KR9Q99Xw)
+
+#### Disclaimer:
+
+Chapter Check does not own or imply ownership of any of the images used in the
+application. All images belong to their respective owners. Chapter Check users
+and its programmers are not liable for any of the content displayed in this
+application.

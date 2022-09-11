@@ -49,13 +49,13 @@ class Moview():
 
         # Local PhotoImage initializations (background + left & right arrows)
         # Uses Pillow's/Tkinter's modules to open jpg/png files and resize them (with antialising)
-        self.img = ImageTk.PhotoImage(Image.open("background.jpg").resize((1000, 666), Image.ANTIALIAS))
-        self.left_arrow = ImageTk.PhotoImage(Image.open("left.png").resize((35, 35), Image.ANTIALIAS))
-        self.right_arrow = ImageTk.PhotoImage(Image.open("right.png").resize((35, 35), Image.ANTIALIAS))
+        self.img = ImageTk.PhotoImage(Image.open("assets/background.jpg").resize((1000, 666), Image.ANTIALIAS))
+        self.left_arrow = ImageTk.PhotoImage(Image.open("assets/left.png").resize((35, 35), Image.ANTIALIAS))
+        self.right_arrow = ImageTk.PhotoImage(Image.open("assets/right.png").resize((35, 35), Image.ANTIALIAS))
 
         # Use the Pyglet library to load locally stored fonts such that they can be used by Tkinter
-        pyglet.font.add_file("Gidole-Regular.ttf")
-        pyglet.font.add_file("library.ttf")
+        pyglet.font.add_file("assets/Gidole-Regular.ttf")
+        pyglet.font.add_file("assets/library.ttf")
 
         # When using reading images from the internet using Pillow, the default behaviour is to display
         # a warning message if an image is too large. In order to avoid this, we can use the warnings
@@ -64,7 +64,7 @@ class Moview():
         warnings.simplefilter('error', Image.DecompressionBombWarning)
 
         # Uses the winsound library to play jazz music in the background (looped asynchronously)
-        winsound.PlaySound("JazzMusic.wav", winsound.SND_ASYNC | winsound.SND_LOOP)
+        winsound.PlaySound("assets/JazzMusic.wav", winsound.SND_ASYNC | winsound.SND_LOOP)
 
         # Call method to start the program
         self.start()
@@ -153,7 +153,7 @@ class Moview():
         self.uname = self.user_entry.get()
         
         # Opens credentials file and searches for the user
-        with open("creds.txt", "r") as f:
+        with open("database/creds.txt", "r") as f:
             while (found == False) and ((line := f.readline()) != ""):
                 line = line.strip().split("|")
 
@@ -256,11 +256,11 @@ class Moview():
     def create_user(self):
 
         # Append the new credentials to the "creds.txt" file, using "|" as a separator
-        with open("creds.txt", "a") as f:
+        with open("database/creds.txt", "a") as f:
             f.write(f"{self.uname}|{self.pwd_entry.get()}\n")
         
         # Create a new file for the user's watchlist, and close it
-        new_user = open(f"{self.uname}.txt", "w")
+        new_user = open(f"database/{self.uname}.txt", "w")
         new_user.close()
 
         # Take user to the home screen
@@ -302,7 +302,7 @@ class Moview():
         user_list = []
         
         # Opens the user's text file and stores all of the lines in a list
-        with open(f"{self.uname}.txt", "r") as f:
+        with open(f"database/{self.uname}.txt", "r") as f:
             user_list = f.readlines()
 
         # For each item in the list, strip the newline character and split
@@ -756,11 +756,11 @@ class Moview():
         current_movie = f'{self.movie_info["id"]}|{self.movie_info["fullTitle"]}|{self.movie_info["image_url"]}'
 
         # Opens the user's text file and stores all of the lines in a list
-        with open(f"{self.uname}.txt", "r") as f:
+        with open(f"database/{self.uname}.txt", "r") as f:
             user_list = f.readlines()
 
         # Opens the user's text file in write mode
-        with open(f"{self.uname}.txt", "w") as f:
+        with open(f"database/{self.uname}.txt", "w") as f:
 
             # Iterate through the user's watchlist
             for i in user_list:

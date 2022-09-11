@@ -17,6 +17,6 @@ This application, written in Python, allows users to create and manage a list of
   - Free Guy (2021)
 
 ### Screenshots
-[![unknown-3.png](https://i.postimg.cc/k4XWpM16/unknown-3.png)](https://postimg.cc/NySyytwB)
-[![unknown-2.png](https://i.postimg.cc/W3W0LRC9/unknown-2.png)](https://postimg.cc/JDXsZF1J)
-[![unknown-1.png](https://i.postimg.cc/nrXBnRtn/unknown-1.png)](https://postimg.cc/QKrHbqtz)
+[![unknown-3-min.png](https://i.postimg.cc/258K4Wpg/unknown-3-min.png)](https://postimg.cc/5XTgJ62m)
+[![unknown-2-min.png](https://i.postimg.cc/0yC4Mf4p/unknown-2-min.png)](https://postimg.cc/ZWCHXr4R)
+[![unknown-1-min.png](https://i.postimg.cc/RZm8Z8gS/unknown-1-min.png)](https://postimg.cc/KR9Q99Xw)

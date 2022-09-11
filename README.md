@@ -23,7 +23,7 @@ This application, written in Python, allows users to create and manage a list of
 
 #### Disclaimer:
 
-Chapter Check does not own or imply ownership of any of the images used in the
-application. All images belong to their respective owners. Chapter Check users
+Moview does not own or imply ownership of any of the images used in the
+application. All images belong to their respective owners. Moview users
 and its programmers are not liable for any of the content displayed in this
 application.
